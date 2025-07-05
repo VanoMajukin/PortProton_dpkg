@@ -1,2 +1,2 @@
- <img src="usr/share/pixmaps/portproton.svg" width="40"/>
+ <img src="usr/share/icons/hicolor/scalable/apps/ru.linux_gaming.PortProton.svg" width="40"/>
 
