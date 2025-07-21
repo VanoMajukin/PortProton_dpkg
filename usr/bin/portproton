@@ -4,7 +4,7 @@
 # License MIT
 ########################################################################
 unset PW_AUTOPLAY PW_SET_LANG PW_SILENT_INSTALL
-export port_ver=1.7.2
+export port_ver=1.7.3
 ########################################################################
 cd "$(dirname "$(readlink -f "$0")")"
 script_path="$(pwd)"
@@ -209,7 +209,7 @@ echo "Try unpacking scripts..."
 tar -xzf "${PORT_WINE_TMP_PATH}/PortWINE-master.tar.gz" -C "${PORT_WINE_TMP_PATH}"
 if [ "$?" = "0" ] ; then
 	[ ! -d "${PORT_WINE_DATA_PATH}" ] && mkdir "${PORT_WINE_DATA_PATH}"
-	if [[ "${PORT_WINE_TMP_PATH}/portwine" ]] ; then
+	if [[ -d "${PORT_WINE_TMP_PATH}/portwine" ]] ; then
 		cp -fr "${PORT_WINE_TMP_PATH}/portwine/data_from_portwine/"* "${PORT_WINE_DATA_PATH}"
 		rm -fr "${PORT_WINE_TMP_PATH}/portwine/"
 	else
